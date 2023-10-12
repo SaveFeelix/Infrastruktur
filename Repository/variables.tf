@@ -1,0 +1,2 @@
+variable "NETWORK_BRIDGE_ID" {}
+variable "IMAGE_REPOSITORY_VERSION" {}

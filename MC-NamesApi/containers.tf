@@ -42,5 +42,4 @@ resource "docker_container" "SERVER" {
     container_path = "/app/Logs"
     volume_name    = docker_volume.SERVER_LOGS.id
   }
-  // TODO Add Logs-Volume
 }

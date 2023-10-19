@@ -3,6 +3,7 @@ resource "docker_container" "REPOSITORY" {
   image      = docker_image.REPOSITORY_IMAGE.image_id
   name       = "Repository"
   restart    = "always"
+
   ports {
     internal = 8081
     external = 8001

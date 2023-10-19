@@ -10,6 +10,9 @@ terraform {
 
 provider "docker" {}
 
+
+/* Infrastruktur */
+/* Ports starten bei 8001 */
 module "Repository" {
   IMAGE_REPOSITORY_VERSION = "3.61.0"
   NETWORK_BRIDGE_ID        = docker_network.BRIDGE.id

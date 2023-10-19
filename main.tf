@@ -19,3 +19,14 @@ module "Repository" {
 
   source = "./Repository"
 }
+
+
+/* API's */
+/* Ports starten bei 9001 */
+module "MC-NamesApi" {
+  NETWORK_BRIDGE_ID      = docker_network.BRIDGE.id
+  IMAGE_SERVER_VERSION   = "3.0.0"
+  IMAGE_DATABASE_VERSION = "11.1.2-jammy"
+  ENV_JWT_TOKEN          = var.ENV_JWT_TOKEN_MCNAMESAPI
+  source                 = "./MC-NamesApi"
+}

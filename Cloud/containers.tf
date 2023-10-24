@@ -41,6 +41,9 @@ resource "docker_container" "CLOUD" {
     "MYSQL_USER=root",
     "MYSQL_PASSWORD=cloud",
     "REDIS_HOST=cloud-redis",
+    "OVERWRITEHOST=cloud.saveapis.com",
+    "OVERWRITEPROTOCOL=https",
+    "OVERWRITECLIURL=https://cloud.saveapis.com/",
   ]
   networks_advanced {
     name = docker_network.INTERNAL.name

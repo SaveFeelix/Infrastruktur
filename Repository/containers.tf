@@ -1,8 +1,7 @@
 resource "docker_container" "REPOSITORY" {
-  depends_on = [docker_image.REPOSITORY_IMAGE, docker_volume.DATA]
-  image      = docker_image.REPOSITORY_IMAGE.image_id
-  name       = "Repository"
-  restart    = "always"
+  image   = docker_image.REPOSITORY_IMAGE.image_id
+  name    = "Repository"
+  restart = "always"
 
   ports {
     internal = 8081

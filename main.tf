@@ -19,6 +19,14 @@ module "Repository" {
 
   source = "./Repository"
 }
+module "Cloud" {
+  NETWORK_BRIDGE_ID      = docker_network.BRIDGE.id
+  IMAGE_CLOUD_VERSION    = "latest"
+  IMAGE_REDIS_VERSION    = "7.2.2-alpine"
+  IMAGE_DATABASE_VERSION = var.IMAGE_DATABASE_VERSION
+
+  source = "./Cloud"
+}
 
 
 /* API's */

@@ -26,7 +26,7 @@ module "Repository" {
 module "MC-NamesApi" {
   NETWORK_BRIDGE_ID      = docker_network.BRIDGE.id
   IMAGE_SERVER_VERSION   = "3.0.0"
-  IMAGE_DATABASE_VERSION = "11.1.2-jammy"
+  IMAGE_DATABASE_VERSION = var.IMAGE_DATABASE_VERSION
   ENV_JWT_TOKEN          = var.ENV_JWT_TOKEN_MCNAMESAPI
   source                 = "./MC-NamesApi"
 }
